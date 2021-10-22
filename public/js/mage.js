@@ -1,16 +1,24 @@
-import { Personnage } from "./personnage.js";
+// import { Personnage } from "./personnage.js";
 
- export class Mage extends Personnage{
-    constructor(nom,vie,attaque){
-        super(nom,vie,attaque)
+ export class Mage{
+    constructor(nom,vie,attaque,mana){
+        // super(nom,vie,attaque)
+        this.nom = nom;
+        this.vie = vie;
+        this.attaque = attaque;
+        this.mana= mana;
       
-        this.mana = Math.floor(Math.random()* 7,9,11);
 
     }
     attaque(){
+        this.attaque = this.attaque * 1.4;
+        this.vie = this.vie -50;
+
 
     }
     defense(){
+        this.attaque = this.attaque /2;
+        this.vie = this.vie *2.5;
 
     }
 }

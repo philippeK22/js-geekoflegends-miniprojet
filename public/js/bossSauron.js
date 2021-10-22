@@ -1,4 +1,5 @@
 import { Personnage } from "./personnage.js";
+
  export class BossSauron extends Personnage{
     constructor(nom,vie,attaque){
         super(nom,vie,attaque)
@@ -6,12 +7,10 @@ import { Personnage } from "./personnage.js";
     }
     enigmes(){
         
-            let enigme =[ `Bonjour je commence le jeux Geek of legends la 1ère qu'est ce qui est jaune et qui attends?
-            en deuxième Je ne peux pas marcher, j’ai pourtant un dos et quatre pieds. Qui suis-je ?
-            en troisième Combien de temps peut vivre une souris ? `]
+            let enigme =["première énigme est ... /n qu'/est ce qui est jaune et qui attends?"," deuxième enigme est ... /n Je ne peux pas marcher, j/'ai pourtant un dos et quatre pieds. Qui suis-je ?"," trisième énigme est ... /n Combien de temps peut vivre une souris ?","Je ne fais pas de bruit quand je me réveille mais je réveille tout le monde. qui suis je ?" ];
             let random = Math.floor(Math.round()* enigme.length);
             let choix = enigme[random];
-            let reponse = ["jonathan","une chaise","sa depends des chats"];
+            let reponse = ["jonathan","une chaise","sa depends des chats","le soleil"];
             if (this.vie <= 100) {
                 alert(choix);
             }
@@ -32,10 +31,10 @@ import { Personnage } from "./personnage.js";
                 alert("sauron est mort")
                 
             }
-            else if (random == 4 && maReponse == reponse[4]) {
-                alert("sauron est mort")
+            // else if (random == 4 && maReponse == reponse[4]) {
+            //     alert("sauron est mort")
                 
-            }
+            // }
     
         }
     
