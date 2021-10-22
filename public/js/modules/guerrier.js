@@ -12,7 +12,7 @@
          
 
      }
-     attaque(){
+     attaques(){
          this.attaque = this.attaque * 1.25;
          this.vie = this.vie -50;
 
@@ -24,7 +24,7 @@
      }
      methodeRage(){
          for (let i = 1; i < 4; i++) {
-             this.rage = this.rage +1 ;
+             this.rage = this.rage +1;
              
          };
          this.attaque = this.attaque +11;

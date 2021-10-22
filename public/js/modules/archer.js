@@ -13,7 +13,7 @@
         
 
     }
-    attaque(){
+    attaques(){
         this.attaque = this.attaque *1.4;
         this.vie = this.vie -50;
 
