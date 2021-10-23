@@ -13,17 +13,20 @@ import { Personnage } from "./modules/personnage.js";
 // ----------------------------------------------------------------------------------
 
 // les boss chrono
-let bossChronos = new BossChrono("chrono",390,90);
-bossChronos.enigmes();
+let bossChronos = new BossChrono("chrono",290,90);
+// bossChronos.enigmes();
+bossChronos.attaqueHero();
 console.log(bossChronos);
 
-// boss Sauron
+// // boss Sauron
 let bossSauron = new BossSauron("sauron", 400,20);
-bossSauron.enigmes();
+// bossSauron.enigmes();
+bossSauron.attaqueHero();
 console.log(bossSauron);
-//boss lilith
+// //boss lilith
 let bossLilith = new BossLilith("lilith",350,42);
-bossLilith.enigmes();
+bossLilith.attaqueHero();
+// bossLilith.enigmes();
 console.log(bossLilith);
 
 // ------------------------------------------------------------------------------------------
@@ -36,7 +39,7 @@ console.log(magicien);
 
 // archeeer
 
-let zelda = new Archer("épée",120,100);
+let zelda = new Archer("zelda",120,100);
 zelda.attaques();
 zelda.defense();
 zelda.flecheRandom();
@@ -51,5 +54,20 @@ gladiator.methodeRage();
 console.log(gladiator);
 let phil = new Personnage("philippe",34,50);
 console.log(phil);
+
+//------------------------------------------------------------------------------------------
+
+let TroisBoss=[bossChronos.nom,bossSauron.nom,bossLilith.nom];
+let bossRandom =TroisBoss[Math.floor(Math.random()* TroisBoss.length)];
+console.log(bossRandom);
+
+let TroisHero = [zelda.nom,gladiator.nom,magicien.nom];
+let heroRandom = TroisHero[Math.floor(Math.random()* TroisHero.length)];
+console.log(heroRandom);
+
+
+
+
+
 
 
